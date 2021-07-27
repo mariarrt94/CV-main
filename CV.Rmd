@@ -1,0 +1,137 @@
+---
+name: Maria Reyes Retana
+position: "Development Economics MSc @ University of Sussex"
+address: |
+         | United Kingdom
+phone: +447 880 811 823 
+email: "mariareyesretana94@gmail.com"
+github: mariarrt94
+linkedin: maria-reyes-retana
+#aboutme: \"3 year of experience doing economic and data analysis and visualisation. I am particularly interested in the use of R programming and other statistical software to analyse economic problems. I am extremely keen to pursue a career as an economist doing policy-oriented research."
+headcolor: 0b7474
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    keep_tex: false
+always_allow_html: yes
+header-includes:
+  \usepackage{float}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \arrayrulecolor{white}
+  \usepackage{hhline}
+  \definecolor{light-gray}{gray}{0.95}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(ggplot2)
+library(dplyr)
+library(sf)
+library(stplanr)
+library(ggrepel)
+library(emojifont)
+library(fontawesome)
+library(kableExtra)
+library(huxtable)
+library(gridExtra)
+```
+\faIcon{briefcase} Professional Experience
+============================================
+
+```{r experience, eval = T}
+tribble(
+  ~ Position, ~ When, ~ Where, ~ Institution, ~ What,
+  
+  "Associate", "Mar 2018 - Aug 2020", "SAI Law & Economics - Economic Consulting Team","Mexico City, Mexico","Expanded the services of the economic consulting team with the social consultancy branch, and directed the first three impact evaluations of the area.",
+  "Associate", "Mar 2018 - Aug 2020", "SAI Law & Economics - Economic Consulting Team","Mexico City, Mexico","Collaborated and handled +20 projects including impact assessments; market analysis; and estimation of economic spillovers, through economic and statistical models.",
+  "Associate", "Mar 2018 - Aug 2020", "SAI Law & Economics - Economic Consulting Team","Mexico City, Mexico","Motivated the generation of a relationship with a key social institution in Mexico, which attracted more social projects to the consulting team.",
+    "Associate", "Mar 2018 - Aug 2020", "SAI Law & Economics - Economic Consulting Team","Mexico City, Mexico","Analysed the effect of multiple mergers, and examined the competitive conditions of distinct markets in collaboration with the Mexican Competition Authority.",
+  "Associate", "Mar 2018 - Aug 2020", "SAI Law & Economics - Economic Consulting Team","Mexico City, Mexico","Managed large databases, including population census, labour force surveys, administrative data,  and private and longitudinal household surveys.",
+  "Head of Department", "Aug 2017 - Dec 2017", "Ministry of Social Development","Mexico City, Mexico","Coordinated the data collection process of the National Community Kitchens Programme, which consisted of cleaning and merging 32 databases each month.",
+  "Head of Department", "Aug 2017 - Dec 2017", "Ministry of Social Development","Mexico City, Mexico","Collaborated with the National Council for the Evaluation of Social Development to develop and implement new targeting criteria for the National Community Kitchens Programme; which consisted of allocating the programme's resources in municipalities with both high poverty rates and limited access to food.",
+  "Intern", "Dec 2016 -  Jul 2017","Superior Audit of the Federation", "Mexico City, Mexico", "Examined the Report on the Results of the Superior Audit of the Public Account 2016.",
+) %>%
+  detailed_entries(Position, When, Where, Institution, What)
+```
+
+\faIcon{university} Education
+==================================
+
+```{r education}
+tribble(
+  ~ study, ~ university, ~ loc, ~ dates, ~ details,
+  "Development Economics MSc", "University of Sussex","Brighton, UK", "Sept 2020 - Sept 2021", "Recipient of the Sussex Chancellor's International Scholarship (awarded to the top 25 international students).",
+    "Development Economics MSc", "University of Sussex","Brighton, UK", "Sept 2020 - Sept 2021", "Obtained a distinction mark in every module of the MSc.",
+    "Development Economics MSc", "University of Sussex","Brighton, UK", "Sept 2020 - Sept 2021", "Dissertation (in progress): Effect of intrahousehold female bargaining power on children's health cognitive skills in Mexico: A longitudinal analysis.",
+  "Economics BA", "Instituto Tecnológico Autónomo de México", "Mexico City, Mexico", "Aug 2012 - Jun 2017", "Grade: 2:1.",
+   "Economics BA", "Instituto Tecnológico Autónomo de México", "Mexico City, Mexico", "Aug 2012 - Jun 2017", "Bachelor Thesis (in Spanish): Telecommunications and Economic Performance in Mexico: An Analysis by Federal Entity according to Level of Income, 2002-2014. Using GMM, executed in Stata.",
+) %>% 
+  detailed_entries(study, dates, university, loc, details, .protect=FALSE)
+```
+
+<!-- \smallskip -->
+<!-- \faIcon{chalkboard} Teaching experience -->
+<!-- ================================== -->
+
+<!-- ```{r social} -->
+<!-- tribble( -->
+<!--   ~ puesto, ~ inst, ~ lug, ~ fecha, ~ deta, -->
+<!--     "Assistant Professor", "Jan 2019 - Aug 2020","Instituto Tecnológico Autónomo de México", "Mexico City, Mexico", "Assistant teaching in the industrial organization module for 30 B.A. students each term.", -->
+<!--   "Assistant Professor", "Jan 2019 - Aug 2020","Instituto Tecnológico Autónomo de México", "Mexico City, Mexico", "Main topics: monopoly and pricing bahaviour, oligopolistic competition, cartels and collusion, product differentiation and price discrimination.", -->
+<!-- ) %>% -->
+<!--   detailed_entries(puesto, inst, lug, fecha, deta, .protect=FALSE) -->
+<!-- ``` -->
+<!-- \smallskip -->
+
+<!-- \faIcon {file-alt} Projects -->
+<!-- ============================================ -->
+<!-- ```{r projects, eval = T} -->
+<!--  tribble( -->
+<!--  ~ Project1, ~ When1, ~ Institution1, ~ Space1, ~ What1, -->
+<!--   "SAI Law & Economics", "2020", "Effect of a tax on sugar-sweetened beverages","","Implemented an econometric analysis to estimate the results on the consumption of increases in taxes in sugary drinks.",  -->
+<!--   "SAI Law & Economics", "2020", "Impact assessment of a student loans programme to study abroad (FUNED)", "", "Executed the econometric analysis to assess the programmes’ impact on different beneficiaries’ profiles, giving special attention to the effect on underrepresented groups, such as women and people in lower deciles of income.",  -->
+<!--  "SAI Law & Economics", "2019","Impact assessment of a children's meal programme (Comedor Santa María A.C.)", "", "Worked with the programme's and public information from the Mexican Population Census to create control groups through a propensity score matching methodology and measure the difference in school attendance rates generated by the programme.",  -->
+<!--    # "SAI Law & Economics", "2019","Impact assessment of a children's meal programme (Comedor Santa María A.C.)", "", "Determined new targeting criteria considering poverty maps at the municipal level. ",  -->
+<!--  "SAI Law & Economics", "2018","Market analysis for a multinational pharmaceutical", "", "Analysis of the  competitive dynamics of the distribution of pharmaceutical products in supermarkets in Mexico.", -->
+<!--    "SAI Law & Economics", "2018","Economic spillovers of a beverage company", "", "Measurement of the economic footprint in the number of direct and indirect jobs a company generates at the national level, using statistical software. ",  -->
+<!--    "SAI Law & Economics", "2018","Economic spillovers of a beverage company", "", "Elaboration of multiple national maps using QGIS to illustrate the effect of the company, in terms of jobs and economic spillovers throughout the production chain. ",  -->
+<!--    "Ministry of Social Development", "2017","Targeting criteria for community kitchens programme", "", "Developed and implemented the new targeting criteria for the National Community Kitchens Programme, which consisted in allocating the resources of the programme in municipalities with both high poverty rates and limited access to food.",  -->
+<!--    "Ministry of Social Development", "2017","Targeting criteria for community kitchens programme", "", "Collaborated in the first phase of the programme's impact evaluation, guided by the National Council for the Evaluation of Social Development Policy.",   -->
+<!--   "Kukua", "2016","Initial indicators for a women's empowerment programme", "", "Assisted on the measure of the initial conditions of women living in poverty for a pilot programme in Oaxaca, gathered and analysed data on income and nutritional habits."  -->
+<!--  ) %>%    -->
+<!--    detailed_entries(Project1, When1, Institution1, Space1, What1)  -->
+<!-- ```  -->
+
+\faIcon{brain} Skills
+================================
+
+<!-- \smallskip -->
+
+\faIcon{cogs} Programmes and Softwares                                             
+---------------------------------
+
+```{r events}
+tribble(~ prog, ~ level, 
+   "R", "Advanced",
+   "Stata", "Upper Intermediate",
+   "EViews", "Competent",
+   "QGIS", "Competent",
+   "GIT", "Competent",
+) %>% 
+  brief_entries(what = level, when = prog, .protect = F)
+```
+
+\faIcon{language} Languages
+-------------------------------
+
+```{r leng}
+tribble(
+  ~ id, ~ leve, 
+   "Spanish", "Native",
+   "English", "Fluent",
+   "French", "Intermediate",
+) %>% 
+  brief_entries(what = leve, when = id, .protect = F)
+```
